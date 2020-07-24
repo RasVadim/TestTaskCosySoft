@@ -1,0 +1,26 @@
+.modal_add {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  padding-top: 8rem;
+}
+
+.modal_add_body {
+  padding: 2rem;
+  width: 400px;
+  height: 200px;
+  border-radius: 5px;
+  background: #fff;
+}
+ 
+.addPhoto{
+    background-color: white;
+    border: none;
+    color: darkolivegreen;
+    font-size: 1.5rem;
+ }

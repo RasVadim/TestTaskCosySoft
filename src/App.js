@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import GalleryGrid from "./GallaryComps/GalleryGrid";
+import ModalAddPicture from "./GallaryComps/Modal/ModalAddPicture";
 
 function App() {
+  //  console.log(modal.openModalAdd())
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="mainGrid">
+        <header className="header">
+          <p className="logo">CosySoft</p>
+          <p className="description">
+            {" "}
+            Test task for the developer's frontend{" "}
+          </p>
+        </header>
+        <div className="title">
+          <p>Gallery</p>
+         <ModalAddPicture />
+        </div>
+        <main>
+          <GalleryGrid />
+        </main>
+      </div>
     </div>
   );
 }
