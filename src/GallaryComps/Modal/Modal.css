@@ -1,4 +1,4 @@
-.modal_add {
+.modal {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -8,19 +8,58 @@
   display: flex;
   justify-content: center;
   padding-top: 8rem;
+  z-index: 2;
 }
 
-.modal_add_body {
+.btn_modal {
+  margin-top: 1.6rem;
+  height: 30px;
+  width: 120px;
+  border: solid 1px #c4c4c4;
+  border-radius: 3px;
+}
+
+.btn_modal:hover {
+  color: #696969;
+  background-color: #fcfcfc;
+}
+
+.btn_modal:focus {
+  border: solid 2px #969696;
+  border-radius: 3px;
+  outline: none;
+}
+
+
+.modal_body {
   padding: 2rem;
   width: 400px;
   height: 200px;
   border-radius: 5px;
   background: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+  z-index: 5;
 }
- 
-.addPhoto{
-    background-color: white;
-    border: none;
-    color: darkolivegreen;
-    font-size: 1.5rem;
- }
+
+.wrapper_input {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.2rem;
+}
+
+.modal_input {
+  height: 15px;
+  width: 250px;
+  align-self: center;
+  margin-left: 8px;
+  border: solid 1px #c4c4c4;
+  border-radius: 3px;
+}
+
+.addPhoto {
+  background-color: white;
+  border: none;
+  color: darkolivegreen;
+  font-size: 1.5rem;
+}

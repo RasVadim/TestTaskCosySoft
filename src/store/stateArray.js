@@ -1,61 +1,61 @@
 export const defaultState = [
   {
-    id: 01,
+    id: 1,
     url: "https://pbs.twimg.com/media/DwxetGfWsAASxjH.jpg",
-    comment: "Comment 1",
+    comment: "Comment 1 :  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus mauris eros, ut molestie quam tincidunt a. Nullam iaculis sapien ipsum, eu sagittis velit",
   },
   {
-    id: 02,
+    id: 2,
     url:
       "https://www.esg89group.it/wp-content/uploads/2018/08/mountains-962793_1280.jpg",
-    comment: "Comment 2",
+    comment: "Comment 2 :  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus mauris eros, ut molestie quam tincidunt a. Nullam iaculis sapien ipsum, eu sagittis velit accumsan a. Mauris ultrices sapien in mi blandit faucibus eleifend sed odio. Morbi porta efficitur sollicitudin. Maecenas fringilla nunc ut urna pretium, sit amet euismod lacus ultrices. ",
   },
   {
-    id: 03,
+    id: 3,
     url:
       "https://st-gdefon.gallery.world/wallpapers_original/286150_gallery.world.jpg",
-    comment: "Comment 3",
+    comment: "Comment 3:  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ",
   },
   {
-    id: 04,
+    id: 4,
     url:
       "https://fsb.zobj.net/crop.php?r=KfCMu3i8fzYidtcj_gbEte4gqyY-wbtLJEekbq1ZnYNR8HbQdKeuDN7C3hwxjdp5o7h0FahPSx2ZuiXNKH2DaqpW7TH2zudFqgGwUTlh4-bEVmEnE-4cRS4B14xQRDw2TP6j3Yu9fK_4kU87",
-    comment: "Comment 4",
+    comment: "Comment 4 :  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ",
   },
   {
-    id: 05,
+    id: 5,
     url:
       "https://avatars.mds.yandex.net/get-pdb/2508630/ae4bfa08-ba13-4522-903a-476e4005701b/s1200?webp=false",
-    comment: "Comment 5",
+    comment: "Comment 5:  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus mauris eros,",
   },
   {
-    id: 06,
+    id: 6,
     url: "https://404store.com/2017/09/01/1104jpg.jpg",
-    comment: "Comment 6",
+    comment: "Comment 6 :  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum",
   },
   {
-    id: 07,
+    id: 7,
     url:
       "https://avatars.mds.yandex.net/get-pdb/28866/4247d17a-370c-4a02-8f63-c4f10c702784/s1200?webp=false",
-    comment: "Comment 7",
+    comment: "Comment 7:  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus mauris eros, ut molestie quam tincidunt a. Nullam iaculis sapien ipsum, eu sagittis velit",
   },
   {
-    id: 08,
+    id: 8,
     url:
       "https://st-gdefon.gallery.world/wallpapers_original/327385_gallery.world.jpg",
-    comment: "Comment 8",
+    comment: "Comment 8 :  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus mauris eros, ut molestie quam tincidunt a. Nullam iaculis sapien ipsum, eu sagittis velit",
   },
   {
-    id: 09,
+    id: 9,
     url:
       "https://ae01.alicdn.com/kf/HTB1jPUhQVXXXXb3apXXq6xXFXXXW/Mahuaf-i046.jpg",
-    comment: "Comment 9",
+    comment: "Comment 9 :  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus mauris eros, ut molestie quam tincidunt a. Nullam iaculis sapien ipsum, eu sagittis velit",
   },
   {
     id: 10,
     url:
       "https://img3.goodfon.ru/original/1024x768/4/b4/nebo-gory-ozero-derevya-7748.jpg",
-    comment: "Comment 10",
+    comment: "Comment 10 :  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus mauris eros, ut molestie quam tincidunt a. Nullam iaculis sapien ipsum, eu sagittis velit",
   },
   {
     id: 11,
@@ -66,7 +66,7 @@ export const defaultState = [
   {
     id: 12,
     url:
-      "https://gradient-print.ru/image/cache/catalog/product/night_city_fotooboi/nochnyegoroda%2838%29-1228x662.png",
+      "https://wallbox.ru/resize/1280x1024/wallpapers/main2/201730/1501358657597cea413b69d0.05241559.jpg",
     comment: "Comment 12",
   },
   {

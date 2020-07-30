@@ -1,13 +1,12 @@
 import React from "react";
 
-function GalleryItem() {
+function GalleryItem(props) {
   return (
-    <div className="GalleryItem">
-      <img
-        className="itemPhoto"
-        src="https://pbs.twimg.com/media/DwxetGfWsAASxjH.jpg"
-      />
-      <p>Comments..</p>
+    <div className="galleryItem">
+      <div className="img_wraper">
+        <img className="itemPhoto" src={props.urlPhoto} />
+      </div>
+      <div className='text_comments'>{props.commentPhoto}</div>
     </div>
   );
 }

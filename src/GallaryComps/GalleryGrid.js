@@ -1,35 +1,23 @@
 import React from "react";
+import { connect } from 'react-redux'
+
 import GalleryItem from "./GalleryItem";
 
-function GalleryGrid() {
+function GalleryGrid(props) {
   return (
     <div className="galleryGrid">
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
+       {props.stateArray.map(objPhoto => {
+         return <GalleryItem urlPhoto={objPhoto.url} commentPhoto={objPhoto.comment} key={objPhoto.id} />
+        })}
+       
     </div>
   );
 }
 
-export default GalleryGrid;
+const mapStateToprops = state => {
+  return {
+    stateArray : state
+  }
+}
+
+export default connect(mapStateToprops)(GalleryGrid);

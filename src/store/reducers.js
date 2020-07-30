@@ -1,8 +1,12 @@
-import { defaultState } from "./storeArray";
-import { ADD_PHOTO, DELETE_PHOTO, CHANGE_COMMENT } from "./Actions";
-const initialState = defaultState;
+import { defaultState } from "./stateArray";
+import {
+  ADD_PHOTO,
+  DELETE_PHOTO,
+  CHANGE_COMMENT,
+  CHANGE_POSITION_PHOTO,
+} from "./actions";
 
-const rootReducer = (state = initialState, action) => {
+export const rootReducer = (state = defaultState, action) => {
   switch (action.type) {
     case ADD_PHOTO:
       state.unshift(action.payload);

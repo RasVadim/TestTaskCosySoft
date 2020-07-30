@@ -1,47 +1,47 @@
 .App {
-  background: linear-gradient( #696969 80px, white 0%);
+  background: linear-gradient(#696969 80px, white 0%);
 }
 
 .mainGrid {
   display: grid;
   grid-gap: 14px;
-  grid-template-columns: minmax(auto, 1fr)
-  minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr)
-   minmax(auto, 1fr);
-  grid-template-areas: 
-  ". header header header header ."
-  ". title title title title ."
-  ". main main main main .";
+  grid-template-columns:
+    minmax(auto, 1fr)
+    minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr)
+    minmax(auto, 1fr);
+  grid-template-areas:
+    ". header header header header ."
+    ". title title title title ."
+    ". main main main main .";
 }
 
-.header{
-  grid-area: header; 
+.header {
+  grid-area: header;
   font-size: 2rem;
   padding: 16px 0;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-
 }
 
-.logo{
+.logo {
   margin: 0;
 }
 
-.description{
+.description {
   font-size: 0.8rem;
   margin: 0 10px;
 }
 
-.title{
+.title {
   grid-area: title;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-main{
+main {
   grid-area: main;
 }
 
@@ -49,20 +49,53 @@ main{
   font-size: calc(10px + 2vmin);
 }
 
-
-
-
-.galleryGrid{
+.galleryGrid {
   display: grid;
-  grid-gap: 14px;
+  grid-gap: 16px;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.GalleryItem{
-
+.galleryItem {
+  overflow: hidden;
+  max-height: 80px;
+  min-height: 50px;
+  padding-bottom: 100%;
+  position: relative;
 }
 
-.itemPhoto{
-  width: 100%;
+.galleryItem:hover {
+  overflow: visible;
+}
+
+.img_wraper {
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.img_wraper:hover {
+  overflow: visible;
+  z-index: 1;
+}
+
+.itemPhoto {
+  width: 180%;
   height: auto;
+  transform: translateX(-20%);
+}
+
+.itemPhoto:hover {
+  width: 160%;
+  box-shadow: 0 0 40px 10px #1d1d1d;
+  transform: translateX(-15%);
+}
+
+.text_comments{
+  font-size: .90rem;
+  overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
 }

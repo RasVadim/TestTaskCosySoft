@@ -20,5 +20,5 @@ export const changeComment = (idPhotoForComment, commentTextValue) => ({
 
 export const changePositionPhoto = (firstPhotoId, lastPhotoId) => ({
   type: CHANGE_POSITION_PHOTO,
-  payload: { idFirst: firstPhotoId, idLast : lastPhotoId },
+  payload: { idFirst: firstPhotoId, idLast: lastPhotoId },
 });
