@@ -8,7 +8,6 @@ class ModalAddPicture extends React.Component {
     super(props);
     this.urlNewPhoto = null;
     this.textNewComment = null;
-    this.modalBody = null;
   }
 
   state = {
@@ -36,14 +35,13 @@ class ModalAddPicture extends React.Component {
         {this.state.isOpened && (
           <div
             className="modal"
-            onClick={ event => {
-              if (event.target !== this.modalBody) {
+            onClick={(event) => {
+              if (!event.target.closest(".modal_body")) {
                 this.setState({ isOpened: false });
               }
             }}
           >
-            <div className="modal_body " 
-            ref={(ref) => (this.modalBody = ref)}>
+            <div className="modal_body ">
               <h1>Add to photos</h1>
               <div className="wrapper_input">
                 url photo
@@ -63,7 +61,9 @@ class ModalAddPicture extends React.Component {
               </div>
               <button
                 className="btn_modal"
-                onClick={() => this.setState({ isOpened: false })}
+                onClick={() => {this.onAddNewPhoto();
+                  this.setState({ isOpened: false })
+                }}
               >
                 Add photo
               </button>

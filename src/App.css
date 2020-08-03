@@ -80,22 +80,51 @@ main {
 }
 
 .itemPhoto {
-  width: 180%;
+  width: 90%;
   height: auto;
-  transform: translateX(-20%);
+  
 }
 
 .itemPhoto:hover {
-  width: 160%;
   box-shadow: 0 0 40px 10px #1d1d1d;
-  transform: translateX(-15%);
 }
 
-.text_comments{
-  font-size: .90rem;
+.text_comments {
+  font-size: 0.9rem;
   overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 4;
-	-webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.delete_photo {
+  display: inline-block;
+  position: absolute;
+  right: 60px;
+  z-index: 4;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 60%);
+  text-shadow: 1px -2px 11px #000000;
+}
+
+.delete_photo:hover {
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 100%);
+  text-shadow: 1px -2px 6px #000000;
+  cursor: pointer;
+}
+
+.delete_photo:active {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 100%);
+  text-shadow: -1px 2px 6px #000000;
+  cursor: pointer;
+}
+
+.second_wraper {
+  width: 200%;
+  height: auto;
+  transform: translateX(-20%);
 }

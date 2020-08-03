@@ -16,7 +16,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <div className="mainGrid">
-          <header className="header">
+          <header className="header" >
             <p className="logo">CosySoft</p>
             <p className="description">
               {" "}

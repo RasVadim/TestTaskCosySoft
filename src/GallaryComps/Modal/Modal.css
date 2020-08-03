@@ -24,7 +24,7 @@
   background-color: #fcfcfc;
 }
 
-.btn_modal:focus {
+.btn_modal:active {
   border: solid 2px #969696;
   border-radius: 3px;
   outline: none;

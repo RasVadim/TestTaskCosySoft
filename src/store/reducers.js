@@ -1,4 +1,4 @@
-import { defaultState } from "./stateArray";
+import { stateArray } from "./stateArray";
 import {
   ADD_PHOTO,
   DELETE_PHOTO,
@@ -6,29 +6,33 @@ import {
   CHANGE_POSITION_PHOTO,
 } from "./actions";
 
+const defaultState = {
+  stateArray: stateArray,
+};
+
 export const rootReducer = (state = defaultState, action) => {
   switch (action.type) {
     case ADD_PHOTO:
-      state.unshift(action.payload);
-      return state;
+      return { ...state, stateArray: [action.payload, ...state.stateArray] };
 
     case DELETE_PHOTO:
-      return state.filter((objPhoto) => objPhoto.id !== action.payload);
+     const newArray = state.stateArray.filter(objPhoto => objPhoto.id !== action.payload);
+      return {...state, stateArray: newArray };
 
     case CHANGE_COMMENT:
-      return state.map((objPhoto) => {
+      return state.stateArray.map((objPhoto) => {
         if (objPhoto.id === action.payload.idPhoto) {
           objPhoto.comment = action.payload.commentText;
         }
       });
     case CHANGE_POSITION_PHOTO:
-      let firstPhoto = state.find(
+      let firstPhoto = state.stateArray.find(
         (objPhoto) => objPhoto.id === action.payload.idFirst
       );
-      let lastPhoto = state.find(
+      let lastPhoto = state.stateArray.find(
         (objPhoto) => objPhoto.id === action.payload.idLast
       );
-      return state.map((objPhoto) => {
+      return state.stateArray.map((objPhoto) => {
         if (objPhoto.id === action.payload.idFirst) {
           objPhoto = lastPhoto;
         } else if (objPhoto.id === action.payload.idLast) {

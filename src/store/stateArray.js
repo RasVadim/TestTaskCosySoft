@@ -1,4 +1,4 @@
-export const defaultState = [
+export const stateArray = [
   {
     id: 1,
     url: "https://pbs.twimg.com/media/DwxetGfWsAASxjH.jpg",
