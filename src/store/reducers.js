@@ -1,13 +1,18 @@
-import { stateArray } from "./stateArray";
+import { stateArrayPhoto } from "./stateArray";
 import {
   ADD_PHOTO,
   DELETE_PHOTO,
   CHANGE_COMMENT,
   CHANGE_POSITION_PHOTO,
+  OPEN_MODAL_PHOTO
 } from "./actions";
 
 const defaultState = {
-  stateArray: stateArray,
+  stateArray: stateArrayPhoto,
+  modalPhoto: {
+    objOpenPhoto : null,
+    isOpened: false
+  }
 };
 
 export const rootReducer = (state = defaultState, action) => {
@@ -16,8 +21,10 @@ export const rootReducer = (state = defaultState, action) => {
       return { ...state, stateArray: [action.payload, ...state.stateArray] };
 
     case DELETE_PHOTO:
-     const newArray = state.stateArray.filter(objPhoto => objPhoto.id !== action.payload);
-      return {...state, stateArray: newArray };
+      const newArray = state.stateArray.filter(
+        (objPhoto) => objPhoto.id !== action.payload
+      );
+      return { ...state, stateArray: newArray };
 
     case CHANGE_COMMENT:
       return state.stateArray.map((objPhoto) => {
@@ -39,6 +46,8 @@ export const rootReducer = (state = defaultState, action) => {
           objPhoto = firstPhoto;
         }
       });
+      case OPEN_MODAL_PHOTO:
+        return { ...state, modalPhoto: action.payload }
   }
   return state;
 };

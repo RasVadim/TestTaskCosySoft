@@ -26,10 +26,10 @@ class ModalAddPicture extends React.Component {
     return (
       <React.Fragment>
         <button
-          className="addPhoto"
+          className={`addPhoto ${this.props.styleBtn}`}
           onClick={() => this.setState({ isOpened: true })}
         >
-          +
+          {this.props.namebtn}
         </button>
 
         {this.state.isOpened && (
@@ -61,8 +61,9 @@ class ModalAddPicture extends React.Component {
               </div>
               <button
                 className="btn_modal"
-                onClick={() => {this.onAddNewPhoto();
-                  this.setState({ isOpened: false })
+                onClick={() => {
+                  this.onAddNewPhoto();
+                  this.setState({ isOpened: false });
                 }}
               >
                 Add photo
@@ -80,5 +81,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(null, mapDispatchToProps)(ModalAddPicture);
-
-// export default ModalAddPicture

@@ -7,7 +7,7 @@
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
-  padding-top: 8rem;
+  padding-top: 3rem;
   z-index: 2;
 }
 
@@ -30,8 +30,8 @@
   outline: none;
 }
 
-
 .modal_body {
+  margin-top: 5rem;
   padding: 2rem;
   width: 400px;
   height: 200px;
@@ -40,6 +40,18 @@
   font-size: 0.9rem;
   text-align: center;
   z-index: 5;
+}
+
+.modal_view_body {
+  padding: 2rem;
+  width: 80%;
+  height: 85%;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 0.9rem;
+  /* text-align: center; */
+  z-index: 5;
+  display: flex;
 }
 
 .wrapper_input {
@@ -60,6 +72,51 @@
 .addPhoto {
   background-color: white;
   border: none;
+}
+
+.addPhotoPlus {
   color: darkolivegreen;
   font-size: 1.5rem;
+}
+
+.addPhotoPlus:hover {
+  font-size: 1.7rem;
+}
+
+.addPhoto:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.image_wraper {
+  height: 100%;
+  width: 85%;
+}
+
+.img_photo {
+  height: 100%;
+  width: 100%;
+
+  object-fit: contain;
+}
+
+.photo_panel {
+  height: 100%;
+  width: 15%;
+  padding-left: 1rem;
+}
+
+.delete_this_photo {
+  color: #aaaaaa;
+  padding: 0.4rem;
+  font-weight: 500;
+}
+
+.delete_this_photo:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.comment {
+  padding-top: 1rem;
 }

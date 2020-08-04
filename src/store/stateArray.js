@@ -1,4 +1,4 @@
-export const stateArray = [
+export const stateArrayPhoto = [
   {
     id: 1,
     url: "https://pbs.twimg.com/media/DwxetGfWsAASxjH.jpg",
