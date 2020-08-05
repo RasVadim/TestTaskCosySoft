@@ -7,7 +7,7 @@
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
-  padding-top: 3rem;
+  padding-top: 2rem;
   z-index: 2;
 }
 
@@ -30,8 +30,14 @@
   outline: none;
 }
 
+.eror_url {
+  display: block;
+  color: red;
+  margin-left: 8rem;
+}
+
 .modal_body {
-  margin-top: 5rem;
+  margin-top: 7rem;
   padding: 2rem;
   width: 400px;
   height: 200px;
@@ -43,13 +49,11 @@
 }
 
 .modal_view_body {
-  padding: 2rem;
-  width: 80%;
-  height: 85%;
+  width: 87%;
+  height: 92%;
   border-radius: 5px;
   background: #fff;
   font-size: 0.9rem;
-  /* text-align: center; */
   z-index: 5;
   display: flex;
 }
@@ -66,6 +70,15 @@
   align-self: center;
   margin-left: 8px;
   border: solid 1px #c4c4c4;
+  border-radius: 3px;
+}
+
+.no_url{
+  height: 15px;
+  width: 250px;
+  align-self: center;
+  margin-left: 8px;
+  border: solid 1px red;
   border-radius: 3px;
 }
 
@@ -90,33 +103,114 @@
 
 .image_wraper {
   height: 100%;
-  width: 85%;
+  width: 84%;
 }
 
 .img_photo {
   height: 100%;
   width: 100%;
-
   object-fit: contain;
 }
 
 .photo_panel {
   height: 100%;
-  width: 15%;
-  padding-left: 1rem;
+  width: 16%;
+  padding: 3rem .8rem 0 .3rem;
 }
 
-.delete_this_photo {
+.delete_this_photo, .edit_comment {
   color: #aaaaaa;
   padding: 0.4rem;
-  font-weight: 500;
+  width: 150px;
 }
 
-.delete_this_photo:hover {
+.delete_this_photo:hover, .edit_comment:hover {
   color: #000000;
   cursor: pointer;
 }
 
-.comment {
-  padding-top: 1rem;
+.invisible {
+  display: none;
 }
+
+.comment {
+  padding: 1rem 0.3rem;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 540px) and (max-width: 960px) {
+
+  .modal_view_body {
+    width: 87%;
+    height: 92%;
+    font-size: 0.9rem;
+    display: block;
+  }
+
+  .image_wraper {
+    height: 72%;
+    width: 100%;
+  }
+  
+  .photo_panel {
+    height: 28%;
+    width: 97%;
+    padding: .8em .8rem .8rem .8rem;
+  }
+
+  .comment {
+    padding: 0 0 0 0rem;
+  }
+
+
+
+}
+
+
+
+
+@media (max-width: 540px) {
+
+.modal_view_body {
+    width: 87%;
+    height: 92%;
+    font-size: 0.9rem;
+    display: block;
+  }
+
+  .image_wraper {
+    height: 65%;
+    width: 100%;
+  }
+  
+  .photo_panel {
+    height: 35%;
+    width: 97%;
+    padding: .8em .8rem .8rem .8rem;
+  }
+
+  .comment {
+    padding: 0 0 0 0rem;
+  }
+
+  .modal_body {
+    margin-top: 7rem;
+    padding: 2rem;
+    width: 300px;
+    height: 300px;
+  }
+
+  .wrapper_input {
+    display: block;
+  }
+
+  
+}
+

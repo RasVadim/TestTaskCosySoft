@@ -27,11 +27,14 @@ export const rootReducer = (state = defaultState, action) => {
       return { ...state, stateArray: newArray };
 
     case CHANGE_COMMENT:
-      return state.stateArray.map((objPhoto) => {
+      const modifiedArray = state.stateArray.map((objPhoto) => {
         if (objPhoto.id === action.payload.idPhoto) {
-          objPhoto.comment = action.payload.commentText;
-        }
+           objPhoto.comment = action.payload.commentText;
+           return objPhoto
+        } else { return objPhoto }
       });
+      console.log({ ...state, stateArray: modifiedArray })
+      return { ...state, stateArray: modifiedArray }
     case CHANGE_POSITION_PHOTO:
       let firstPhoto = state.stateArray.find(
         (objPhoto) => objPhoto.id === action.payload.idFirst

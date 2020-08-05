@@ -128,3 +128,52 @@ main {
   height: auto;
   transform: translateX(-20%);
 }
+
+
+@media (min-width: 540px) and (max-width: 960px) {
+
+  .mainGrid {
+    display: grid;
+    grid-gap: 14px;
+    grid-template-columns:
+      auto minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr) auto;
+    grid-template-areas:
+      ". header header  header ."
+      ". title title title ."
+      ". main main main .";
+  }
+
+
+  .galleryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+}
+
+
+
+
+
+@media (max-width: 540px) {
+
+
+  .mainGrid {
+    display: grid;
+    grid-gap: 14px;
+    grid-template-columns:
+      auto minmax(150px, 1fr) auto;
+    grid-template-areas:
+      ". header ."
+      ". title  ."
+      ". main main main .";
+  }
+
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+
+
+
+}

@@ -16,7 +16,10 @@ export const deletePhoto = (idPhoto) => ({
 
 export const changeComment = (idPhotoForComment, commentTextValue) => ({
   type: CHANGE_COMMENT,
-  payload: { idPhoto: idPhotoForComment, commentText: commentTextValue },
+  payload: {
+    idPhoto: idPhotoForComment,
+    commentText: commentTextValue,
+  },
 });
 
 export const changePositionPhoto = (firstPhotoId, lastPhotoId) => ({
@@ -27,7 +30,7 @@ export const changePositionPhoto = (firstPhotoId, lastPhotoId) => ({
 export const openModalPhoto = (objPhoto, isOpen) => ({
   type: OPEN_MODAL_PHOTO,
   payload: {
-    objOpenPhoto : objPhoto,
-    isOpened: isOpen
-  }
+    objOpenPhoto: objPhoto,
+    isOpened: isOpen,
+  },
 });

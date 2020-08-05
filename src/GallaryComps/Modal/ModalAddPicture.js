@@ -12,6 +12,8 @@ class ModalAddPicture extends React.Component {
 
   state = {
     isOpened: false,
+    urlStyle: "modal_input",
+    noUrl: "",
   };
 
   onAddNewPhoto() {
@@ -23,11 +25,13 @@ class ModalAddPicture extends React.Component {
   }
 
   render() {
+    const patternUrl = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+
     return (
       <React.Fragment>
         <button
           className={`addPhoto ${this.props.styleBtn}`}
-          onClick={() => this.setState({ isOpened: true })}
+          onClick={() => this.setState({ ...this.state, isOpened: true })}
         >
           {this.props.namebtn}
         </button>
@@ -37,7 +41,7 @@ class ModalAddPicture extends React.Component {
             className="modal"
             onClick={(event) => {
               if (!event.target.closest(".modal_body")) {
-                this.setState({ isOpened: false });
+                this.setState({ ...this.state, isOpened: false });
               }
             }}
           >
@@ -47,10 +51,11 @@ class ModalAddPicture extends React.Component {
                 url photo
                 <input
                   id="url_photo"
-                  className="modal_input"
+                  className={this.state.urlStyle}
                   ref={(ref) => (this.urlNewPhoto = ref)}
                 ></input>
               </div>
+              {this.state.noUrl}
               <div className="wrapper_input">
                 comments to photo
                 <input
@@ -62,8 +67,24 @@ class ModalAddPicture extends React.Component {
               <button
                 className="btn_modal"
                 onClick={() => {
-                  this.onAddNewPhoto();
-                  this.setState({ isOpened: false });
+                  if (patternUrl.test(this.urlNewPhoto.value)) {
+                    this.onAddNewPhoto();
+                    this.setState({
+                      isOpened: false,
+                      urlStyle: "modal_input",
+                      noUrl: "",
+                    });
+                  } else {
+                    this.setState({
+                      ...this.state,
+                      urlStyle: "no_url",
+                      noUrl: (
+                        <div className="eror_url">
+                          Please enter a valid url the photo
+                        </div>
+                      ),
+                    });
+                  }
                 }}
               >
                 Add photo
