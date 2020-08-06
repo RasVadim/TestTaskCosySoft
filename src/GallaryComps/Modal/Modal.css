@@ -186,12 +186,12 @@
   }
 
   .image_wraper {
-    height: 65%;
+    height: auto;
     width: 100%;
   }
   
   .photo_panel {
-    height: 35%;
+    height: auto;
     width: 97%;
     padding: .8em .8rem .8rem .8rem;
   }

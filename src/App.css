@@ -72,6 +72,7 @@ main {
   height: 0;
   padding-bottom: 100%;
   position: relative;
+  border-radius: 1.2%;
 }
 
 .img_wraper:hover {
@@ -82,11 +83,12 @@ main {
 .itemPhoto {
   width: 90%;
   height: auto;
-  
+  border-radius: 1%;
 }
 
 .itemPhoto:hover {
   box-shadow: 0 4px 6px 0 #868686;
+  
 }
 
 .text_comments {
@@ -117,7 +119,7 @@ main {
 }
 
 .delete_photo:active {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: rgba(255, 255, 255, 85%);
   cursor: pointer;
 }
@@ -134,6 +136,8 @@ main {
   .mainGrid {
     display: grid;
     grid-gap: 14px;
+    grid-auto-columns: 0px;
+    overflow: hidden;
     grid-template-columns:
       auto minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr) auto;
     grid-template-areas:
@@ -160,6 +164,7 @@ main {
   .mainGrid {
     display: grid;
     grid-gap: 14px;
+    grid-column-gap: 0px;
     grid-template-columns:
       auto minmax(150px, 1fr) auto;
     grid-template-areas:
@@ -170,9 +175,12 @@ main {
 
 
   .galleryGrid {
+    
     grid-template-columns: 1fr;
   }
 
-
+  .img_wraper {
+    border-radius: 0%;
+  }
 
 }
