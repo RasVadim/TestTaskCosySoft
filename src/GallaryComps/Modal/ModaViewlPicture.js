@@ -76,7 +76,7 @@ class ModalViewPicture extends React.Component {
                       this.props.modalPhoto.objOpenPhoto.id,
                       this.textComment.innerText
                     );
-                    console.log(this.textComment.innerText)
+                    this.setState({ visibleEditPhoto: "invisible" })
                   }}
                 >
                   CHANGE COMMENT
