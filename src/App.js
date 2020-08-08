@@ -20,8 +20,7 @@ function App() {
           <header className="header" >
             <p className="logo">CosySoft</p>
             <p className="description">
-              {" "}
-              Test task for the developer's frontend{" "}
+              Test task for the developer's frontend
             </p>
           </header>
           <div className="title">

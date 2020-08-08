@@ -45,10 +45,6 @@ main {
   grid-area: main;
 }
 
-.App-header {
-  font-size: calc(10px + 2vmin);
-}
-
 .galleryGrid {
   display: grid;
   grid-gap: 16px;
@@ -151,6 +147,11 @@ main {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .img_wraper:hover {
+    overflow: hidden;
+    z-index: auto;
+  }
+
 
 }
 
@@ -182,5 +183,27 @@ main {
   .img_wraper {
     border-radius: 0%;
   }
+
+  .img_wraper:hover {
+    overflow: hidden;
+    z-index: auto;
+  }
+
+  .header {
+    font-size: 1.8rem;
+    padding: 20px 5px 0 5px;
+  }
+
+  .title {
+    align-items: center;
+    padding: 5px 5px 0 5px;
+  }
+
+  
+  .text_comments {
+    font-size: 0.85rem;
+    padding: 0 5px 0 5px;
+  }
+
 
 }
