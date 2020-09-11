@@ -18,9 +18,9 @@ function App() {
       <div className="App">
         <div className="mainGrid">
           <header className="header" >
-            <p className="logo">CosySoft</p>
+            <p className="logo">VR galary</p>
             <p className="description">
-              Test task for the developer's frontend
+            Developer's frontend test task
             </p>
           </header>
           <div className="title">
