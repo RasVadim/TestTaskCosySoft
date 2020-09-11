@@ -23,14 +23,14 @@ class ModalAddPicture extends React.Component {
       comment: this.textNewComment.value,
     });
   }
-
+ 
   render() {
     const patternUrl = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
 
     return (
       <React.Fragment>
         <button
-          className={`addPhoto ${this.props.styleBtn}`}
+          className={`addPhoto ${this.props.styleBtn && this.props.styleBtn}`}
           onClick={() => this.setState({ ...this.state, isOpened: true })}
         >
           {this.props.namebtn}

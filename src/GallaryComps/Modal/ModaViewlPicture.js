@@ -19,6 +19,10 @@ class ModalViewPicture extends React.Component {
     visibleEditPhoto: "invisible",
   };
 
+  styleBtn = {
+    fontWeight: 300
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -40,7 +44,7 @@ class ModalViewPicture extends React.Component {
               </div>
               <div className="photo_panel">
                 <div className="add_new_photo">
-                  <ModalAddPicture namebtn={"ADD NEW PHOTO"} />
+                  <ModalAddPicture styleBtn={'add_photo_bold'} namebtn={"ADD NEW PHOTO"} />
                 </div>
                 <div
                   className="delete_this_photo"

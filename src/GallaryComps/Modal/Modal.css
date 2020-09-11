@@ -122,12 +122,18 @@
   color: #aaaaaa;
   padding: 0.4rem;
   width: 150px;
+  font-weight: 600;
 }
 
 .delete_this_photo:hover, .edit_comment:hover {
   color: #000000;
   cursor: pointer;
 }
+
+.add_photo_bold{
+  font-weight: 300;
+  color: #aaaaaa;
+  }
 
 .invisible {
   display: none;
@@ -213,4 +219,3 @@
 
   
 }
-
